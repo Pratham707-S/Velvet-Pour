@@ -1,9 +1,9 @@
 function App() {
   return (
-    <div className="app">
-      <h1>Velvet Pour</h1>
-      <p>Luxury Cocktail Lounge</p>
-    </div>
+    <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center">
+      <h1 className="text-4xl font-bold tracking-wider">Velvet Pour</h1>
+      <p className="text-gray-400 mt-2">Cocktails Crafted with Passion</p>
+    </main>
   )
 }
 
