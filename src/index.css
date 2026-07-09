@@ -8,6 +8,8 @@
 }
 
 @theme {
+    --color-yellow: #e7d393;
+    --color-white-100: #efefef;
     --font-sans: "Mona Sans", sans-serif;
     --font-modern-negra: "Modern Negra", sans-serif;
     --font-serif: "DM Serif Text", serif;
@@ -20,4 +22,28 @@ body {
     color: white;
     scroll-behavior: smooth;
     overflow-x: hidden;
+}
+
+@utility flex-center {
+    @apply flex justify-center items-center;
+}
+
+@utility col-center {
+    @apply flex flex-col justify-center items-center;
+}
+
+@utility abs-center {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+
+@utility text-gradient {
+    background: linear-gradient(to bottom, #ffffff, #898989);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.noisy {
+    background-image: url("/images/noise.png");
+    background-size: cover;
 }
