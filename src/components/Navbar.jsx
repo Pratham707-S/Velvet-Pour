@@ -7,22 +7,17 @@ const navLinks = [
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 transition-colors duration-300">
-      <div className="container mx-auto flex justify-between items-center px-6 py-4">
+    <nav>
+      <div>
         <a href="#home" className="flex items-center gap-2">
-          <img src="/images/logo.png" alt="logo" className="w-8 h-8" />
-          <p className="font-modern-negra text-xl text-yellow">Velvet Pour</p>
+          <img src="/images/logo.png" alt="logo" />
+          <p>Velvet Pour</p>
         </a>
 
-        <ul className="flex items-center gap-8">
+        <ul>
           {navLinks.map((link) => (
             <li key={link.id}>
-              <a
-                href={`#${link.id}`}
-                className="text-white-100 hover:text-yellow transition-colors font-sans text-sm tracking-wide"
-              >
-                {link.title}
-              </a>
+              <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
         </ul>
