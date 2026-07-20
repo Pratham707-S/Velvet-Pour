@@ -47,3 +47,71 @@ body {
     background-image: url("/images/noise.png");
     background-size: cover;
 }
+
+nav {
+    @apply fixed top-0 left-0 z-50 md:p-9 p-3 w-full;
+
+    div {
+        @apply flex justify-between items-center mx-auto max-w-7xl;
+
+        p {
+            @apply font-modern-negra md:text-2xl text-xl text-yellow;
+        }
+
+        a {
+            @apply cursor-pointer;
+        }
+
+        ul {
+            @apply flex md:gap-12 gap-4;
+
+            li a {
+                @apply text-white-100 font-sans md:text-base text-sm hover:text-yellow transition-colors;
+            }
+        }
+    }
+}
+
+#hero {
+    @apply relative z-10 min-h-dvh w-full overflow-hidden;
+
+    .title {
+        @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-modern-negra 2xl:text-[250px] md:text-[180px] text-[80px] tracking-wider z-20 pointer-events-none;
+    }
+
+    .left-leaf {
+        @apply absolute left-0 md:top-24 top-10 md:w-fit w-1/3 z-10 pointer-events-none;
+    }
+
+    .right-leaf {
+        @apply absolute right-0 md:top-24 top-10 md:w-fit w-1/3 z-10 pointer-events-none;
+    }
+
+    .body {
+        @apply absolute bottom-10 left-0 w-full z-20;
+
+        .content {
+            @apply flex justify-between items-end mx-auto max-w-7xl px-6;
+
+            p {
+                @apply font-serif text-white-100;
+            }
+
+            .view-cocktails {
+                @apply flex flex-col items-end gap-4 max-w-md text-right;
+
+                a {
+                    @apply bg-yellow text-black font-sans px-6 py-3 rounded-full font-medium hover:bg-yellow/90 transition-colors;
+                }
+            }
+        }
+    }
+}
+
+.video {
+    @apply h-dvh w-full overflow-hidden;
+
+    video {
+        @apply h-full w-full object-cover;
+    }
+}
